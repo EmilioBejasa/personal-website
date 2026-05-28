@@ -1,0 +1,60 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #0f0f13;
+  --bg-card: #18181f;
+  --bg-card-hover: #1f1f28;
+  --border: #2a2a35;
+  --text: #a0a0b0;
+  --text-muted: #606070;
+  --heading: #f0f0f8;
+  --accent: #7c6ff7;
+  --accent-light: #a89cf8;
+  --accent-glow: rgba(124, 111, 247, 0.15);
+  --tag-bg: rgba(124, 111, 247, 0.12);
+  --tag-text: #a89cf8;
+  --sans: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --mono: 'Cascadia Code', 'Fira Code', ui-monospace, monospace;
+  --radius: 12px;
+  --transition: 0.2s ease;
+  --shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+  font-size: 16px;
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--sans);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  color: var(--heading);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+a {
+  color: var(--accent-light);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--heading);
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}

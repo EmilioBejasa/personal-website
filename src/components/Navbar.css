@@ -1,0 +1,136 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+  transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+  background: rgba(15, 15, 19, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  padding: 14px 40px;
+}
+
+.navbar-logo {
+  font-family: var(--mono);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--accent-light);
+  letter-spacing: 0.05em;
+}
+
+.navbar-logo:hover {
+  color: var(--heading);
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  list-style: none;
+}
+
+.navbar-links a {
+  font-size: 14px;
+  color: var(--text);
+  transition: color var(--transition);
+  font-weight: 500;
+}
+
+.navbar-links a:hover {
+  color: var(--heading);
+}
+
+.navbar-links a.active {
+  color: var(--accent-light);
+}
+
+.navbar-resume {
+  padding: 7px 16px;
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  color: var(--accent-light) !important;
+  font-size: 14px;
+  transition: all var(--transition) !important;
+}
+
+.navbar-resume:hover {
+  background: var(--accent-glow) !important;
+  color: var(--accent-light) !important;
+}
+
+.navbar-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.navbar-toggle span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--text);
+  border-radius: 2px;
+  transition: all 0.25s ease;
+  transform-origin: center;
+}
+
+.navbar-toggle.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.navbar-toggle.open span:nth-child(2) { opacity: 0; }
+.navbar-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+@media (max-width: 640px) {
+  .navbar {
+    padding: 16px 20px;
+  }
+
+  .navbar.scrolled {
+    padding: 12px 20px;
+  }
+
+  .navbar-toggle {
+    display: flex;
+  }
+
+  .navbar-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    background: var(--bg-card);
+    border-bottom: 1px solid var(--border);
+    padding: 16px 0;
+  }
+
+  .navbar-links.open {
+    display: flex;
+  }
+
+  .navbar-links li {
+    width: 100%;
+  }
+
+  .navbar-links a {
+    display: block;
+    padding: 12px 24px;
+  }
+
+  .navbar-resume {
+    margin: 8px 24px 0;
+    text-align: center;
+  }
+}
