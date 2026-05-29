@@ -1,0 +1,33 @@
+.contact-inner {
+  max-width: 560px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.contact-text {
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--text);
+}
+
+.contact-links {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-muted);
+  font-size: 15px;
+  font-weight: 500;
+  transition: color var(--transition), transform var(--transition);
+}
+
+.contact-link:hover {
+  color: var(--accent-light);
+  transform: translateY(-2px);
+}

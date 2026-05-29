@@ -5,6 +5,11 @@
   gap: 20px;
 }
 
+.resume-container {
+  width: 100%;
+  max-width: 800px;
+}
+
 .resume-document {
   border: 1px solid var(--border);
   border-radius: var(--radius);

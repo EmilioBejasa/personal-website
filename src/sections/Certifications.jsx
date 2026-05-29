@@ -64,6 +64,7 @@ export default function Certifications() {
               src={badge.img}
               alt={badge.name}
               className="cert-badge-img"
+              loading="lazy"
             />
             <span className="cert-issuer">{badge.issuer}</span>
             <p className="cert-name">{badge.name}</p>

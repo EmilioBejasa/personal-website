@@ -41,11 +41,11 @@ export default function Hero() {
         <p className="hero-description">
           I&apos;m a software developer specializing in mobile engineering and
           testing infrastructure. I build open-source React Native tooling —
-          currently maintaining visual regression systems at Screenshotbot.
+          independently extending a visual regression library started at Screenshotbot.
         </p>
         <div className="hero-cta">
           <a href="#projects" className="btn btn-primary">View My Work</a>
-          <a href="#footer" className="btn btn-outline">Get In Touch</a>
+          <a href="#contact" className="btn btn-outline">Get In Touch</a>
         </div>
       </div>
       <div className="hero-glow" aria-hidden="true" />

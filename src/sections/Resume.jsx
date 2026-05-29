@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { Document, Page, pdfjs } from 'react-pdf'
 import 'react-pdf/dist/Page/AnnotationLayer.css'
 import 'react-pdf/dist/Page/TextLayer.css'
@@ -13,6 +13,19 @@ pdfjs.GlobalWorkerOptions.workerSrc = new URL(
 export default function Resume() {
   const [numPages, setNumPages] = useState(null)
   const [pageNumber, setPageNumber] = useState(1)
+  const [pageWidth, setPageWidth] = useState(null)
+  const containerRef = useRef(null)
+
+  useEffect(() => {
+    if (!containerRef.current) return
+    const observer = new ResizeObserver(entries => {
+      for (const entry of entries) {
+        setPageWidth(Math.floor(entry.contentRect.width))
+      }
+    })
+    observer.observe(containerRef.current)
+    return () => observer.disconnect()
+  }, [])
 
   function onLoadSuccess({ numPages }) {
     setNumPages(numPages)
@@ -20,23 +33,26 @@ export default function Resume() {
 
   return (
     <section id="resume" className="section">
-      <p className="section-label">06. Resume</p>
+      <p className="section-label">07. Resume</p>
       <h2 className="section-title">My Resume</h2>
       <div className="section-divider" />
 
       <div className="resume-viewer-wrap">
-        <Document
-          file={resumePdf}
-          onLoadSuccess={onLoadSuccess}
-          className="resume-document"
-        >
-          <Page
-            pageNumber={pageNumber}
-            className="resume-page"
-            renderTextLayer={true}
-            renderAnnotationLayer={true}
-          />
-        </Document>
+        <div ref={containerRef} className="resume-container">
+          <Document
+            file={resumePdf}
+            onLoadSuccess={onLoadSuccess}
+            className="resume-document"
+          >
+            <Page
+              pageNumber={pageNumber}
+              className="resume-page"
+              renderTextLayer={true}
+              renderAnnotationLayer={true}
+              width={pageWidth || undefined}
+            />
+          </Document>
+        </div>
 
         {numPages > 1 && (
           <div className="resume-pagination">
