@@ -44,6 +44,13 @@
   border: 1px solid rgba(124, 111, 247, 0.2);
 }
 
+.skill-tag.primary {
+  background: rgba(124, 111, 247, 0.18);
+  color: #c4b8ff;
+  border-color: rgba(124, 111, 247, 0.55);
+  font-weight: 500;
+}
+
 @media (max-width: 640px) {
   .skills-grid {
     grid-template-columns: 1fr;

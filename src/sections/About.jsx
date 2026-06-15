@@ -35,13 +35,17 @@ export default function About() {
               <span className="detail-label">GPA</span>
               <span>3.52 / 4.0 &mdash; cum laude</span>
             </div>
+            <div className="about-detail">
+              <span className="detail-label">Status</span>
+              <span className="status-open">Open to full-time roles</span>
+            </div>
           </div>
         </div>
 
         <div className="about-card">
           <div className="about-avatar">
             <img
-              src="/avatar.jpg"
+              src={`${import.meta.env.BASE_URL}avatar.jpg`}
               alt="Emilio Bejasa"
               className="avatar-img"
               onError={e => { e.currentTarget.style.display = 'none'; e.currentTarget.nextSibling.style.display = 'flex'; }}

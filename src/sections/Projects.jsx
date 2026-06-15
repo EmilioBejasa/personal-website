@@ -5,7 +5,7 @@ const projects = [
     title: 'rn-storybook-auto-screenshots',
     period: 'Dec 2025 – Present',
     description:
-      'Open-source React Native library for screenshot-based visual regression testing. Auto-discovers Storybook components, renders them on Android, and captures deterministic PNG screenshots. Bridges React Native and Android native code, with full GitHub Actions CI integration via Screenshotbot.',
+      'npm-published React Native library with a zero-config API: drop it in, run one command, and every Storybook story is rendered on Android and captured as a deterministic PNG. Consumers get pixel-level visual regression checks on every PR without writing a single native file.',
     tags: ['React Native', 'TypeScript', 'Android SDK', 'GitHub Actions', 'Storybook'],
     github: 'https://github.com/EmilioBejasa/rn-storybook-auto-screenshots',
     live: null,

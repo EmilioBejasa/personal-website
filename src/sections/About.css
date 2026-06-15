@@ -93,6 +93,11 @@
   color: var(--accent-light);
 }
 
+.status-open {
+  color: #6ee7b7;
+  font-weight: 500;
+}
+
 @media (max-width: 768px) {
   .about-grid {
     grid-template-columns: 1fr;
