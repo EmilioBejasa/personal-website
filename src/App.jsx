@@ -23,7 +23,7 @@ export default function App() {
           }
         })
       },
-      { threshold: 0.25 }
+      { threshold: 0.1, rootMargin: '0px 0px -60px 0px' }
     )
     sections.forEach(s => observer.observe(s))
     return () => observer.disconnect()

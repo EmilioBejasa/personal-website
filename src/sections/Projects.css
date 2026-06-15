@@ -16,9 +16,9 @@
 }
 
 .project-card:hover {
-  border-color: var(--accent);
+  border-color: rgba(124, 111, 247, 0.5);
   transform: translateY(-4px);
-  box-shadow: var(--shadow);
+  box-shadow: inset 3px 0 0 var(--accent), 0 10px 36px rgba(124, 111, 247, 0.2);
 }
 
 .project-card.featured {
