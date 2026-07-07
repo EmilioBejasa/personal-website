@@ -5,11 +5,16 @@ const links = ['About', 'Experience', 'Skills', 'Projects', 'Certifications', 'C
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
+  const [scrollProgress, setScrollProgress] = useState(0)
   const [menuOpen, setMenuOpen] = useState(false)
   const [active, setActive] = useState('')
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 40)
+    const onScroll = () => {
+      setScrolled(window.scrollY > 40)
+      const total = document.body.scrollHeight - window.innerHeight
+      setScrollProgress(total > 0 ? (window.scrollY / total) * 100 : 0)
+    }
     window.addEventListener('scroll', onScroll)
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
@@ -53,6 +58,9 @@ export default function Navbar() {
           </li>
         ))}
       </ul>
+      <div className="scroll-progress-bar" aria-hidden="true">
+        <div className="scroll-progress" style={{ width: `${scrollProgress}%` }} />
+      </div>
     </nav>
   )
 }

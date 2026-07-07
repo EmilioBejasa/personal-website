@@ -27,6 +27,14 @@
   box-shadow: 0 0 0 1px var(--accent), inset 0 1px 0 rgba(255,255,255,0.04);
 }
 
+.project-card.highlight {
+  grid-column: 1 / -1;
+}
+
+.project-card.highlight .project-description {
+  max-width: 70ch;
+}
+
 .project-card.featured:hover {
   box-shadow: 0 0 0 1px var(--accent), 0 8px 32px var(--accent-glow);
 }

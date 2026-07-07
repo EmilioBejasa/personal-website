@@ -39,10 +39,10 @@ export default function Hero() {
           <span>{displayed}</span>
           <span className="hero-cursor" aria-hidden="true" /></p>
         <p className="hero-description">
-          I&apos;m a software developer specializing in mobile engineering and
-          testing infrastructure. I build and maintain open-source React Native
-          tooling for visual regression testing — including a screenshot library
-          that integrates with Android CI pipelines and GitHub Actions.
+          Software developer focused on mobile engineering and testing. I build
+          open-source React Native tooling for visual regression testing — a
+          screenshot library that runs pixel-level checks on every PR through
+          Android CI and GitHub Actions.
         </p>
         <div className="hero-cta">
           <a href="#projects" className="btn btn-primary">View My Work</a>

@@ -21,7 +21,7 @@
   border-color: var(--accent);
   background: var(--bg-card-hover);
   transform: translateY(-2px);
-  box-shadow: var(--shadow);
+  box-shadow: 0 0 0 1px var(--accent), 0 0 28px rgba(124, 111, 247, 0.35);
 }
 
 .cert-badge-img {

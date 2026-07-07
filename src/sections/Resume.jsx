@@ -1,80 +1,23 @@
-import { useState, useRef, useEffect } from 'react'
-import { Document, Page, pdfjs } from 'react-pdf'
-import 'react-pdf/dist/Page/AnnotationLayer.css'
-import 'react-pdf/dist/Page/TextLayer.css'
 import './Resume.css'
 import resumePdf from '../assets/resume.pdf'
 
-pdfjs.GlobalWorkerOptions.workerSrc = new URL(
-  'pdfjs-dist/build/pdf.worker.min.mjs',
-  import.meta.url,
-).toString()
-
 export default function Resume() {
-  const [numPages, setNumPages] = useState(null)
-  const [pageNumber, setPageNumber] = useState(1)
-  const [pageWidth, setPageWidth] = useState(null)
-  const containerRef = useRef(null)
-
-  useEffect(() => {
-    if (!containerRef.current) return
-    const observer = new ResizeObserver(entries => {
-      for (const entry of entries) {
-        setPageWidth(Math.floor(entry.contentRect.width))
-      }
-    })
-    observer.observe(containerRef.current)
-    return () => observer.disconnect()
-  }, [])
-
-  function onLoadSuccess({ numPages }) {
-    setNumPages(numPages)
-  }
-
   return (
     <section id="resume" className="section">
       <p className="section-label">07. Resume</p>
       <h2 className="section-title">My Resume</h2>
       <div className="section-divider" />
 
-      <div className="resume-viewer-wrap">
-        <div ref={containerRef} className="resume-container">
-          <Document
-            file={resumePdf}
-            onLoadSuccess={onLoadSuccess}
-            className="resume-document"
-          >
-            <Page
-              pageNumber={pageNumber}
-              className="resume-page"
-              renderTextLayer={true}
-              renderAnnotationLayer={true}
-              width={pageWidth || undefined}
-            />
-          </Document>
-        </div>
-
-        {numPages > 1 && (
-          <div className="resume-pagination">
-            <button
-              className="page-btn"
-              onClick={() => setPageNumber(p => Math.max(1, p - 1))}
-              disabled={pageNumber <= 1}
-            >
-              ← Prev
-            </button>
-            <span className="page-count">{pageNumber} / {numPages}</span>
-            <button
-              className="page-btn"
-              onClick={() => setPageNumber(p => Math.min(numPages, p + 1))}
-              disabled={pageNumber >= numPages}
-            >
-              Next →
-            </button>
-          </div>
-        )}
-
-        <a href={resumePdf} download="EmilioBejasaResume.pdf" className="resume-download">
+      <div className="resume-cta">
+        <p className="resume-text">
+          Want a full look at my experience and skills? Download my resume below.
+        </p>
+        <a href={resumePdf} download="EmilioBejasaResume.pdf" className="btn btn-primary">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+            <polyline points="7 10 12 15 17 10"/>
+            <line x1="12" y1="15" x2="12" y2="3"/>
+          </svg>
           Download PDF
         </a>
       </div>

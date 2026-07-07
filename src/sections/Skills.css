@@ -15,6 +15,7 @@
 .skills-card:hover {
   border-color: var(--accent);
   transform: translateY(-2px);
+  box-shadow: 0 0 0 1px var(--accent), 0 0 28px rgba(124, 111, 247, 0.35);
 }
 
 .skills-category {
@@ -42,6 +43,16 @@
   font-size: 13px;
   font-family: var(--mono);
   border: 1px solid rgba(124, 111, 247, 0.2);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.skill-icon {
+  width: 13px;
+  height: 13px;
+  flex-shrink: 0;
+  opacity: 0.85;
 }
 
 .skill-tag.primary {

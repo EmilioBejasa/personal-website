@@ -10,6 +10,7 @@ const projects = [
     github: 'https://github.com/EmilioBejasa/rn-storybook-auto-screenshots',
     live: null,
     featured: true,
+    highlight: true,
   },
   {
     title: 'Audioviz',
@@ -80,7 +81,7 @@ export default function Projects() {
 
       <div className="projects-grid">
         {projects.map(project => (
-          <article key={project.title} className={`project-card ${project.featured ? 'featured' : ''}`}>
+          <article key={project.title} className={`project-card ${project.featured ? 'featured' : ''} ${project.highlight ? 'highlight' : ''}`}>
             <div className="project-header">
               <div>
                 {project.featured && <span className="project-featured-badge">Featured</span>}
