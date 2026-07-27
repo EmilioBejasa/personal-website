@@ -8,7 +8,6 @@ import Skills from './sections/Skills'
 import Projects from './sections/Projects'
 import Certifications from './sections/Certifications'
 import Contact from './sections/Contact'
-import Resume from './sections/Resume'
 import ScrollToTop from './components/ScrollToTop'
 
 export default function App() {
@@ -40,7 +39,6 @@ export default function App() {
         <Projects />
         <Certifications />
         <Contact />
-        <Resume />
       </main>
       <ScrollToTop />
       <footer id="footer" className="footer">
