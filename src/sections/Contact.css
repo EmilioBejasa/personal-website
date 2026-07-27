@@ -11,11 +11,33 @@
   color: var(--text);
 }
 
+.contact-actions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
 .contact-email-btn {
-  align-self: flex-start;
   box-shadow: none !important;
 }
 
 .contact-email-btn:hover {
   box-shadow: none !important;
+}
+
+.contact-socials {
+  display: flex;
+  gap: 16px;
+}
+
+.contact-socials a {
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  transition: color var(--transition);
+}
+
+.contact-socials a:hover {
+  color: var(--accent-light);
 }

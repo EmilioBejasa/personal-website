@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import './Hero.css'
+import resumePdf from '../assets/resume.pdf'
 
 const PHRASES = ['Software developer.', 'Problem solver.', 'Mobile engineer.']
 
@@ -47,6 +48,14 @@ export default function Hero() {
         <div className="hero-cta">
           <a href="#projects" className="btn btn-primary">View My Work</a>
           <a href="#contact" className="btn btn-outline">Get In Touch</a>
+          <a href={resumePdf} download="EmilioBejasaResume.pdf" className="btn btn-outline">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+              <polyline points="7 10 12 15 17 10"/>
+              <line x1="12" y1="15" x2="12" y2="3"/>
+            </svg>
+            Resume
+          </a>
         </div>
       </div>
       <div className="hero-glow" aria-hidden="true" />
