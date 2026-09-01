@@ -3,7 +3,7 @@ import './Projects.css'
 const projects = [
   {
     title: 'rn-storybook-auto-screenshots',
-    period: 'Dec 2025 – Present',
+    period: 'Dec 2025 – Apr 2026',
     description:
       'npm-published React Native library with a zero-config API: drop it in, run one command, and every Storybook story is rendered on Android and captured as a deterministic PNG. Consumers get pixel-level visual regression checks on every PR without writing a single native file.',
     tags: ['React Native', 'TypeScript', 'Android SDK', 'GitHub Actions', 'Storybook'],
