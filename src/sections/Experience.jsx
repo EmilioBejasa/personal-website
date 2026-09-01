@@ -4,15 +4,14 @@ const experiences = [
   {
     role: 'Mobile Developer',
     company: 'Screenshotbot',
-    period: 'December 2025 – Present',
-    description: 'Internship completed · Continuing independent development',
+    period: 'December 2025 – April 2026',
+    description: 'Internship completed',
     bullets: [
       'Designed and shipped rn-storybook-auto-screenshots, an open-source React Native package that eliminates manual screenshot review by automating the full capture-and-compare pipeline.',
       'Built a component discovery system that auto-detects every Storybook story in a codebase, renders each on an Android emulator, and produces deterministic PNG screenshots for pixel-level CI diffing.',
       'Authored a native bridge module connecting React Native TypeScript to Android SDK APIs, enabling screenshot capture without requiring any consumer-side native configuration.',
       'Integrated the library with GitHub Actions and Screenshotbot, reducing visual regression review from a manual process to a fully automated CI check on every pull request.',
       'Diagnosed and resolved Android emulator flakiness, permission issues, and Gradle build conflicts that caused non-deterministic screenshot output across CI runs.',
-      'Continuing post-internship as an independent maintainer — shipping new features, broadening platform support, and responding to issues from open-source adopters.',
     ],
     tags: ['React Native', 'TypeScript', 'Android SDK', 'GitHub Actions', 'Storybook', 'Jest'],
   },
