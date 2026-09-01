@@ -13,6 +13,26 @@ const projects = [
     highlight: true,
   },
   {
+    title: 'iOS Test Kit',
+    period: 'Aug 2026 – Present',
+    description:
+      'Modular Swift Package providing reusable infrastructure for iOS networking, persistence, UI automation, performance monitoring, and system integrations. 59 independently consumable components built with Swift protocols, dependency injection, and test doubles, validated through reusable GitHub Actions workflows and a production-style demo app covering UI behavior, accessibility, performance, and local data persistence.',
+    tags: ['Swift', 'XCTest', 'GitHub Actions', 'iOS SDK'],
+    github: 'https://github.com/EmilioBejasa/iOS_testing_suite',
+    live: null,
+    featured: true,
+  },
+  {
+    title: 'Poetry Portfolio Website',
+    period: 'Aug 2026',
+    description:
+      'Responsive portfolio website built from the ground up to showcase published poetry, artwork, and biographical content. Reusable page layouts and navigation across Home, About, Poems, Art, and Contact sections, with content-focused UI design for a consistent browsing experience across desktop and mobile.',
+    tags: ['HTML', 'CSS', 'JavaScript'],
+    github: 'https://github.com/EmilioBejasa/nick-website',
+    live: 'https://nicholastylerng.com',
+    featured: false,
+  },
+  {
     title: 'Audioviz',
     period: 'Sep 2024 – Dec 2024',
     description:
